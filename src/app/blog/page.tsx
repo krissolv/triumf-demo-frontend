@@ -19,7 +19,7 @@ export default async function Page() {
 			<Link href={'/'}>Go back</Link>
 			<br /><br />
 			<ul>
-				{posts.map((post) => (
+				{posts.map((post: {id: number, title: String, text: String}) => (
 					<Post key={post.id} title={post.title} text={post.text} />
 				))}
 			</ul>
