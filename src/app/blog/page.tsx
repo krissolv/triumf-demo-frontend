@@ -6,7 +6,7 @@ export default async function Page() {
 	let posts;
 
 	try{
-		const data = await fetch('http://localhost:3001/posts');
+		const data = await fetch(`${process.env.api_url}/posts`);
 		posts = await data.json();
 	}catch(error){
 		posts = [];
